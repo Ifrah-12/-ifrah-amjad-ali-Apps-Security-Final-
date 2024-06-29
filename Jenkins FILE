@@ -1,0 +1,23 @@
+pipeline {
+agent any
+options {
+skipStagesAfterUnstable()
+}
+stages {
+stage('Build') {
+steps {
+echo 'Building your IFRAH'
+}
+}
+stage('Test') {
+steps {
+echo 'Testing your IFRAH'
+}
+}
+stage('Deploy') {
+steps {
+echo 'Deploying your IFRAH'
+}
+}
+}
+}
